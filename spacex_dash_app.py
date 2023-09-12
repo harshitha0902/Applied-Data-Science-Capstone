@@ -63,7 +63,7 @@ app.layout = html.Div(children=[html.H1('SpaceX Launch Records Dashboard',
 Output(component_id='success-pie-chart', component_property='figure'),
 Input(component_id='site-dropdown', component_property='value')
 )
-def get_pie(value):
+def get_piechart(value):
     filtered_df = spacex_df
     if value == 'All Sites':
         fig = px.pie(filtered_df, values='class', names='Launch Site', title='Total Success Launches By Site')
